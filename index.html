@@ -25,9 +25,9 @@
   </head>
 
   <body>
-    <h1>Number guessing game</h1>
+    <h1>Угадай число =)</h1>
 
-    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+    <p>Игра загадает рандомное число от 1 до 100. У тебя есть 10 попыток его угадать. Если число будет меньше или больше загаданного, игра тебе подскажет</p>
 
     <div class="form">
       <label for="guessField">Enter a guess: </label>
@@ -60,7 +60,7 @@
         guesses.textContent += userGuess + ' ';
 
         if (userGuess === randomNumber) {
-          lastResult.textContent = 'Congratulations! You got it right!';
+          lastResult.textContent = 'Афигеть. Ты бог рандома!';
           lastResult.style.backgroundColor = 'green';
           lowOrHi.textContent = '';
           setGameOver();
@@ -69,12 +69,12 @@
           lowOrHi.textContent = '';
           setGameOver();
         } else {
-          lastResult.textContent = 'Wrong!';
+          lastResult.textContent = 'Не угадал =)';
           lastResult.style.backgroundColor = 'red';
           if(userGuess < randomNumber) {
-            lowOrHi.textContent = 'Last guess was too low!' ;
+            lowOrHi.textContent = 'Бери больше!' ;
           } else if(userGuess > randomNumber) {
-            lowOrHi.textContent = 'Last guess was too high!';
+            lowOrHi.textContent = 'Бери меньше!';
           }
         }
 
